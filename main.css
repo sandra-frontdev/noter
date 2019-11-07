@@ -1,0 +1,187 @@
+/* ------------------------------------*/
+/* BASIC SETUP */
+/* ------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /*background-color: rgb(238, 162, 162);*/
+    /*background-color: rgb(194, 103, 148);*/
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+h1 {
+    font-size: 200px
+}
+
+/* ------------------------------------*/
+/* HEADER */
+/* ------------------------------------*/
+
+/*header {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url('img/background.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('img/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    width: 100%;
+    height: 100%;
+    height: 100vh;
+    background-attachment: fixed;
+    -webkit-font-smoothing: antialiased;
+}*/
+
+header {
+    height: 100vh;
+    background-color: hsla(200, 40%, 30%, .4);
+    background-image:
+        url('img/background.jpg');
+    background-size:
+        2500px;
+    animation: 50s para infinite linear;
+}
+
+@keyframes para {
+    100% {
+        background-position:
+            -100px 30%;
+    }
+}
+
+span.title {
+    color: rgb(8, 8, 8);
+    font-size: 150%;
+    word-spacing: 6px;
+    letter-spacing: 1px;
+}
+
+.arrow-down {
+    margin: 0 auto;
+}
+
+
+/* ------------------------------------*/
+/* MAIN */
+/* ------------------------------------*/
+main {
+    margin: 0;
+    width: 100%;
+    font-family: "Exo", sans-serif;
+    color: #fff;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+#notes {
+    margin: 0;
+}
+
+.input-note {
+    margin-top: 30px;
+}
+
+.ui.grid>.column:not(.row),
+.ui.grid>.row>.column {
+    padding: 0;
+}
+
+.ui.grid>.row {
+    padding: 0;
+    overflow: hidden;
+    margin: 0;
+    padding-bottom: 50px
+}
+
+.row {
+    width: 100%;
+    overflow: hidden;
+}
+
+.ui.button {
+    margin-top: 40px;
+}
+
+.notes {
+    font-size: 150%;
+    font-weight: 900;
+    color: black;
+}
+
+div.ui.container.center.aligned {
+    margin-top: 4%;
+}
+
+div.ui.inverted.vertical.menu {
+    margin-left: 30px;
+}
+
+div.item {
+    margin-bottom: 20px;
+    padding: 7px;
+}
+
+.ui.list>.item>img.image {
+    display: block;
+}
+
+img.ui.avatar.image {
+    position: absolute;
+    left: 20%;
+}
+
+.header {
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+/* ------------------------------------*/
+/* FOOTER */
+/* ------------------------------------*/
+
+footer {
+    background-color: whitesmoke;
+    text-align: center;
+}
+
+#arrow-up {
+    position: fixed;
+    bottom: 5px;
+    right: 20px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
